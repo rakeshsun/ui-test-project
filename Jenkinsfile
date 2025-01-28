@@ -4,10 +4,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/master']],  // Specifies the master branch
+                    branches: [[name: '*/main']],  // Specifies the master branch
                     userRemoteConfigs: [[url: 'https://github.com/rakeshsun/ui-test-project.git']]
                 ])
 
